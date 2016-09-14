@@ -1,0 +1,78 @@
+name: hadley met centre sea surface temperature data
+
+variable: sea surface temperature
+
+description: description of dataset goes here
+
+url: http://link-to-main-data-download-page
+
+download_instructions: 
+
+associated_data_packages: e.g., rnoaa, hadsstr
+
+timespan:
+  - start: start_yyyy
+  - end: end_yyyy
+
+spatial_coverage: coordinates bounding box in 
+
+spatial_resolution: spatial resolution
+
+temporal_resolution: annual, daily, hourly, ...
+
+temporal_continuous: boolean tag - are there temporal data gaps
+
+spatial_continuous: boolean tag - are there spatial data gaps
+
+spatial_projection: if any.. or CRS
+
+units: degrees C, m, m/s, g/L
+
+textfile_preview: possible to make a dropdown with a sample of the data?
+
+source:
+  - satellite
+  - in situ instrument
+  - model
+  - buoys
+
+reference_papers: 
+"When using the data set in a paper, the following is the correct citation to use:
+Rayner, N. A.; Parker, D. E.; Horton, E. B.; Folland, C. K.; Alexander, L. V.; Rowell, D. P.; Kent, E. C.; Kaplan, A. (2003) Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century J. Geophys. Res.Vol. 108, No. D14, 4407 10.1029/2002JD002670  (pdf ~9Mb)"
+<http://www.metoffice.gov.uk/hadobs/hadisst/HadISST_paper.pdf>
+
+tutorials: links to useful tutorials to use the data
+
+does_study_update: yes/no
+
+update_schedule: daily, hourly, monthly, annually
+
+sampling_error: yes/no
+
+missing_data: value or notes? 
+
+file_type: 
+  - netcdf
+  - geotiff
+  - csv 
+
+file_size: size of downloaded file
+
+citation_policy: citation policy - with disclaimer and reference of last update - also provide link to latest copy of citation policy
+
+data_type_tag:
+  - bathymetric
+  - coastlines
+  - nutrient
+  - temperature
+  - productivity
+  - gridded
+
+ecosystems:
+  - marine
+  - terrestrial
+  - 
+
+grab_bag_tags:
+  - pretty
+
