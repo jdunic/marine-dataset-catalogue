@@ -1,23 +1,80 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for hash in site.data %}
-    {% assign dataset = hash[1] %}
-      <li>
-
-        <h2>
-          <a class="post-link" href="{{ dataset.url }}">{{ dataset.name | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="jumbotron">
+    <h1>Welcome to the Marine Dataset Catalogue</h1>
+    <p>This is a catalogue of open datasets for marine environments.</p>
+    <p><a href="/database" class="btn btn-primary btn-lg" role="button">View the database</a></p>
 </div>
+
+<div class="page-header">
+    <h2>What's this all about?</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            The Marine Dataset Catalogue is an <strong>open source</strong> database
+            of open data projects.
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Submit a Dataset</h3>
+        <p>
+            The Marine Dataset is only as good as the size and quality of the dataset. 
+            This means we need submissions of datasets to consider, and for researchers
+            to complete our survey to make the dataset better.
+        </p>
+
+        <a href="#submit" class="btn btn-default">Submit a Dataset &raquo;</a>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Complete our Survey</h3>
+        <p>
+            The Marine Dataset is only as good as the size and quality of the dataset. 
+            This means we need submissions of datasets to consider, and for researchers
+            to complete our survey to make the dataset better.
+        </p>
+
+        <a href="#survey" class="btn btn-default">Complete the Survey &raquo;</a>
+    </div>
+</div>
+
+<div class="page-header">
+    <h2>Why did we create it?</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            While scientists have been pushing for open data for a number of years,
+            a lack of a clean interface to find datasets severely impacts how many
+            researchers end up utilizing open data.
+        </p>
+    </div>
+</div>
+
+<div class="page-header">
+    <h2>Recent Datasets Added</h2>
+</div>
+
+{% for hash in site.data %}
+    {% assign dataset = hash[1] %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="/view/#">{{ dataset.name | escape }}</a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

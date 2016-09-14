@@ -36,4 +36,12 @@ $on-laptop:        800px;
 // }
 
 // Import partials from the `minima` theme.
-@import "minima";
+
+ul.search {
+    list-style-type: none;
+    padding: 0px;
+
+    li {
+        display: inline-block;
+    }
+}
