@@ -2,37 +2,44 @@ name: hadley met centre sea surface temperature data
 
 variable: sea surface temperature
 
-description: description of dataset goes here
+description: Global sea ice and sea surface temperature 
 
-url: http://link-to-main-data-download-page
+url: http://www.metoffice.gov.uk/hadobs/hadisst/
 
-download_instructions: 
+download_instructions: You will most likely want to download the netcdf version of the file <HadISST_sst.nc.gz> if you would like to have the raw, monthly average sea surface temperature values. 
 
-associated_data_packages: e.g., rnoaa, hadsstr
+associated_data_packages: hadsstr
 
 timespan:
-  - start: start_yyyy
-  - end: end_yyyy
+  - start: 1871
+  - end: 1995
 
-spatial_coverage: coordinates bounding box in 
+spatial_coverage: global
 
-spatial_resolution: spatial resolution
+spatial_bounding_lat: -90 - 90
 
-temporal_resolution: annual, daily, hourly, ...
+spatial_bounding_lon: -180 - 180
 
-temporal_continuous: boolean tag - are there temporal data gaps
+spatial_resolution: 1 degree latitude-longitude
 
-spatial_continuous: boolean tag - are there spatial data gaps
+temporal_resolution: monthly
+
+temporal_continuous: no
+
+spatial_continuous: yes
+
+spatial_discontinuity: "Users have noticed that there is a minor discontinuity at the dateline in HadISST1 SST fields starting in 1982. It appears to only affect gridcells just to the east of the dateline. Please note that this can affect estimates of the mean and variability of SSTs in HadISST1 when analysed across this region."
 
 spatial_projection: if any.. or CRS
 
-units: degrees C, m, m/s, g/L
+units: degrees C
 
 textfile_preview: possible to make a dropdown with a sample of the data?
 
 source:
+  - aggregated methods
   - satellite
-  - in situ instrument
+  - ship instruments
   - model
   - buoys
 
@@ -43,36 +50,32 @@ reference_papers: |
 
 tutorials: links to useful tutorials to use the data
 
-does_study_update: yes/no
+does_study_update: \yes
 
-update_schedule: daily, hourly, monthly, annually
+update_schedule: monthly
 
-sampling_error: yes/no
+sampling_error: \no
 
 missing_data: value or notes? 
 
 file_type: 
   - netcdf
-  - geotiff
-  - csv 
 
 file_size: size of downloaded file
 
-citation_policy: citation policy - with disclaimer and reference of last update - also provide link to latest copy of citation policy
+citation_policy: Citation policy can be found at <<http://www.metoffice.gov.uk/hadobs/hadisst>>. See Rayner et al. 2003. 
 
 data_type_tag:
-  - bathymetric
-  - coastlines
-  - nutrient
   - temperature
-  - productivity
-  - gridded
 
 ecosystems:
   - marine
-  - terrestrial
-  - 
 
 grab_bag_tags:
-  - pretty
 
+potential_applicatons:
+  - climate velocity
+  - sea surface temperature anomalies
+
+community_notes:
+  
