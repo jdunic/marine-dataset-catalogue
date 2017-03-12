@@ -1,0 +1,103 @@
+<script type="text/javascript">
+    var uniques = function (value, index, self) {
+        return self.indexOf(value) === index;
+    };
+    
+    var load_db = function () {
+        if (!window.localStorage) {
+            //alert("Browser unsupported at this time. Have you tried Google Chrome");
+            console.log("Browser unsupported at this time. Have you tried Google Chrome");
+            return;
+        }
+            
+        // db already initialized
+        // todo: add back in local caching
+        //if (window.db) {
+        //    console.log("db already initialized");
+        //    return;
+        //}
+        
+        try {
+            // todo: enable local caching, make it smarter!
+            throw "fuck the local cache";
+            
+            var str_db = window.localStorage.getItem('db');
+            var db = JSON.parse(str_db);
+            if (db.data.length == 0)
+                throw "empty database!";
+            window.db = db;
+            
+            console.log('loaded database from localStorage');
+            return;
+        } catch (err) {
+            console.log("Could not load db, regenerating: " + err);
+            
+            var db = {}
+            
+            var sources = [
+                {% for hash in site.data %}
+                {% assign dataset = hash[1] %}
+                    {% for o in dataset.source %}
+                        "{{ o }}",
+                    {% endfor %}
+                {% endfor %}
+            ];
+            var file_types = [
+                {% for hash in site.data %}
+                {% assign dataset = hash[1] %}
+                    {% for o in dataset.file_type %}
+                        "{{ o }}",
+                    {% endfor %}
+                {% endfor %}
+            ];
+            var data_type_tags = [
+                {% for hash in site.data %}
+                {% assign dataset = hash[1] %}
+                    {% for o in dataset.data_type_tag %}
+                        "{{ o }}",
+                    {% endfor %}
+                {% endfor %}
+            ];
+            
+            var data = [
+                {% for hash in site.data %}
+                    {
+                    {% assign dataset = hash[1] %}
+                        'name': "{{ dataset.name }}",
+                        'description': "{{ dataset.description }}",
+                        'url': "{{ dataset.url }}",
+                        'source': [
+                            {% for source in dataset.source %}
+                                "{{ source }}",
+                            {% endfor %}
+                        ],
+                        'file_type': [
+                            {% for type in dataset.file_type %}
+                                "{{ type }}",
+                            {% endfor %}
+                        ],
+                        'data_type_tag': [
+                            {% for type in dataset.data_type_tag %}
+                                "{{ type }}",
+                            {% endfor %}
+                        ],
+                        'associated_data_packages': "{{ dataset.associated_data_packages}}"
+                    },
+                {% endfor %}
+            ];
+            
+            db.data = data;
+            db.sources = sources.filter(uniques);
+            db.file_types = file_types.filter(uniques);
+            db.data_type_tags = data_type_tags.filter(uniques);
+            
+            window.db = db;
+            window.localStorage.setItem('db', JSON.stringify(db));
+            
+            console.log('database loaded');
+            return;
+        }
+    };
+    
+    load_db();
+</script>
