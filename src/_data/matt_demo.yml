@@ -1,8 +1,8 @@
-name: Example dataset
+name: Matt's Dataset
 
 variable: variable measured - e.g., sea surface temperature
 
-description: description of dataset goes here
+description: best dataset ever because matt made it
 
 url: http://link-to-main-data-download-page
 
@@ -49,7 +49,7 @@ sampling_error: yes/no
 missing_data: value or notes? 
 
 file_type: 
-  - netcdf,
+  - netcdf
   - geotiff
   - csv 
 
@@ -72,4 +72,3 @@ ecosystems:
 
 grab_bag_tags:
   - pretty
-
