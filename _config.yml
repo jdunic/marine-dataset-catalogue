@@ -25,7 +25,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 destination: public
-source: src
+#source: 
 exclude: ['node_modules']
 
 # Build settings
