@@ -24,7 +24,7 @@ url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-destination: public
+destination: "public"
 source: src
 exclude: ['node_modules']
 
