@@ -27,6 +27,7 @@ github_username:  jekyll
 destination: public
 source: src
 exclude: ['node_modules']
+root: /src
 
 # Build settings
 markdown: kramdown
