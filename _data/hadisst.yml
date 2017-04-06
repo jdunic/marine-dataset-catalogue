@@ -8,8 +8,8 @@ url: http://www.metoffice.gov.uk/hadobs/hadisst/
 
 download_instructions: You will most likely want to download the netcdf version of the file <HadISST_sst.nc.gz> if you would like to have the raw, monthly average sea surface temperature values. 
 
-associated_data_packages: 
-  - R_packages: hadsstr [https://github.com/jebyrnes/hadsstR]
+#associated_data_packages:  
+  #- R_packages: hadsstr <<https://github.com/jebyrnes/hadsstR>>
 
 timespan:
   - start: 1871
