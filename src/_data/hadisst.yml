@@ -1,18 +1,24 @@
-name: hadley met centre sea surface temperature data
+name: Hadley met centre sea surface temperature data
 
 variable: sea surface temperature
 
-description: Global sea ice and sea surface temperature 
+description: Historical and current global sea ice and sea surface temperature gridded dataset. Missing data were interpolated using a model reconstruction. 
+
+Model reconstruction of global sea surface temperature and sea ice cover. For details see Rayner et al. 2003. 
+
+- Missing data were interpolated
+
 
 url: http://www.metoffice.gov.uk/hadobs/hadisst/
 
 download_instructions: You will most likely want to download the netcdf version of the file <HadISST_sst.nc.gz> if you would like to have the raw, monthly average sea surface temperature values. 
 
-associated_data_packages: hadsstr
+associated_data_packages: 
+  R_packages: hadsstr [https://github.com/jebyrnes/hadsstR]
 
 timespan:
   - start: 1871
-  - end: 1995
+  - end: present
 
 spatial_coverage: global
 
@@ -30,38 +36,35 @@ spatial_continuous: yes
 
 spatial_discontinuity: "Users have noticed that there is a minor discontinuity at the dateline in HadISST1 SST fields starting in 1982. It appears to only affect gridcells just to the east of the dateline. Please note that this can affect estimates of the mean and variability of SSTs in HadISST1 when analysed across this region."
 
-spatial_projection: if any.. or CRS
+crs: +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0
 
 units: degrees C
 
 textfile_preview: possible to make a dropdown with a sample of the data?
 
-source:
-  - aggregated methods
-  - satellite
+sources:
+  - model interpolation
+  - satellites
   - ship instruments
-  - model
-  - buoys
+  - in situ buoy measurements
 
 reference_papers: |
     "When using the data set in a paper, the following is the correct citation to use:
     Rayner, N. A.; Parker, D. E.; Horton, E. B.; Folland, C. K.; Alexander, L. V.; Rowell, D. P.; Kent, E. C.; Kaplan, A. (2003) Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century J. Geophys. Res.Vol. 108, No. D14, 4407 10.1029/2002JD002670  (pdf ~9Mb)"
     <http://www.metoffice.gov.uk/hadobs/hadisst/HadISST_paper.pdf>
 
-tutorials: links to useful tutorials to use the data
+tutorials: none currently
 
-does_study_update: \yes
+does_study_update: yes
 
 update_schedule: monthly
 
-sampling_error: \no
-
-missing_data: value or notes? 
+sampling_error: no
 
 file_type: 
   - netcdf
 
-file_size: size of downloaded file
+file_size: ~500 mb
 
 citation_policy: Citation policy can be found at <<http://www.metoffice.gov.uk/hadobs/hadisst>>. See Rayner et al. 2003. 
 
@@ -72,10 +75,13 @@ ecosystems:
   - marine
 
 grab_bag_tags:
+  - historical
 
-potential_applicatons:
+potential_applications:
   - climate velocity
   - sea surface temperature anomalies
 
 community_notes:
+  - This is a good dataset for historical ocean temperatures
+  - Check for updates about data quality at the top of <<http://www.metoffice.gov.uk/hadobs/hadisst/>> before use. 
   
