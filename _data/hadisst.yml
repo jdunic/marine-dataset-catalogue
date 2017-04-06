@@ -2,11 +2,8 @@ name: Hadley met centre sea surface temperature data
 
 variable: sea surface temperature
 
-description: Historical and current global sea ice and sea surface temperature gridded dataset. Missing data were interpolated using a model reconstruction. 
+description: Historical and current global sea ice and sea surface temperature gridded dataset. Missing data were interpolated using a model reconstruction. For details see Rayner et al. 2003. 
 
-Model reconstruction of global sea surface temperature and sea ice cover. For details see Rayner et al. 2003. 
-
-- Missing data were interpolated
 
 
 url: http://www.metoffice.gov.uk/hadobs/hadisst/
