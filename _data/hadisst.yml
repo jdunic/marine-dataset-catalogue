@@ -4,8 +4,6 @@ variable: sea surface temperature
 
 description: Historical and current global sea ice and sea surface temperature gridded dataset. Missing data were interpolated using a model reconstruction. For details see Rayner et al. 2003. 
 
-
-
 url: http://www.metoffice.gov.uk/hadobs/hadisst/
 
 download_instructions: You will most likely want to download the netcdf version of the file <HadISST_sst.nc.gz> if you would like to have the raw, monthly average sea surface temperature values. 
@@ -45,9 +43,8 @@ sources:
   - ship instruments
   - in situ buoy measurements
 
-reference_papers:
-    "When using the data set in a paper, the following is the correct citation to use:
-    Rayner, N. A.; Parker, D. E.; Horton, E. B.; Folland, C. K.; Alexander, L. V.; Rowell, D. P.; Kent, E. C.; Kaplan, A. (2003) Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century J. Geophys. Res.Vol. 108, No. D14, 4407 10.1029/2002JD002670  (pdf ~9Mb)"
+reference_papers: "When using the data set in a paper, the following is the correct citation to use: |
+    Rayner, N. A.; Parker, D. E.; Horton, E. B.; Folland, C. K.; Alexander, L. V.; Rowell, D. P.; Kent, E. C.; Kaplan, A. (2003) Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century J. Geophys. Res.Vol. 108, No. D14, 4407 10.1029/2002JD002670  (pdf ~9Mb)" |
     <http://www.metoffice.gov.uk/hadobs/hadisst/HadISST_paper.pdf>
 
 tutorials: none currently
