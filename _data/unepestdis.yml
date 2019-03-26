@@ -1,0 +1,68 @@
+name: UNEP Global Estuary Database
+
+variable: Average estuary discharge rate (in m3 s-1)
+
+description: Global distribution of over 1,300 estuaries including some lagoon systems and fjords. The majority of estuaires are represented by polygons, except for 44 records which used points. 
+
+url: http://data.unep-wcmc.org/datasets/23
+
+download_instructions: You will need to request access to the data with a valid email address and a description of the intended use of the data. You will then be emailed a download link containing the shape file and associated metadata. 
+
+timespan:
+  - start: 2003
+  - end: N/A
+
+spatial_coverage: global
+
+spatial_bounding_lat: -53.6 - 78.2
+
+spatial_bounding_lon: -178.9 - 178.6
+
+spatial_resolution: varying resolutions
+
+temporal_resolution: calculated over specified number of years
+
+temporal_continuous: yes
+
+spatial_continuous: yes
+
+spatial_projection: WGS 1984
+
+units: m3 s-1
+
+textfile_preview: 
+
+source:
+  - estuary polygons
+  - point data
+
+reference_papers: When using the data in a paper, the following is the correct citation to use: Alder, J. (2003). Putting the coast in the "Sea Around Us". The Sea Around Us Newsletter 15: 1-2/ URL: http://seaaroundus.org/newsletter/Issue15.pdf; http://data.unep-wcmc.org/datasets/23 (version 2.0)
+
+tutorials: N/A
+
+does_study_update: no
+
+update_schedule: N/A
+
+missing_data: The database accounts for over 80 % of the world's freshwater discharge. This dataset is not comprehensive and does not include every estuary in the world.
+
+file_type: 
+  - shapefile
+
+file_size: 6.2 MB
+
+citation_policy: Please cite the data source in all publications. 
+
+data_type_tag:
+  - estuaries
+  - discharge
+  - fresh water
+  - rivers
+  - lagoon
+  - fjord 
+
+ecosystems:
+  - aquatic
+  - brackish
+  - estuarine 
+

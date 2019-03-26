@@ -1,0 +1,67 @@
+name: Global Mangrove Watch Map of Mangroves
+
+variable: Baseline map of mangroves for 2010
+
+description: Geospatial information about mangrove extent with the primary objective to provide a baseline map of mangroves for 2010 using ALOS PALSAR and Landsat data, and changes from this baseline for eight epochs between 1996 and 2017 derived from JERS-1, ALOS, and ALOS-2. Annual maps are planned from 2018 and onwards.
+
+url: http://data.unep-wcmc.org/datasets/45
+
+download_instructions: You will need to request access to the data with a valid email address and a description of the intended use of the data. You will then be emailed a download link containing the shape file and associated metadata. 
+
+associated_data_packages: N/A
+
+timespan:
+  - start: 1996
+  - end: ongoing
+
+spatial_coverage: global
+
+spatial_bounding_lat: -38.8 - 33.8
+
+spatial_bounding_lon: -175.3 - 179.9
+
+spatial_resolution: 0.8 arc seconds
+
+temporal_resolution: annual
+
+temporal_continuous: yes
+
+spatial_continuous: yes
+
+spatial_projection: WGS 1984
+
+units: km
+
+textfile_preview: 
+
+source:
+  - satellite
+  - remote sensing
+
+reference_papers: When using the data in a paper, the following is the correct citation to use: Bunting, P., Rosenqvist, A., Lucas, R., Rebelo, L.M., Hilarides, L., Thomas, N., Hardy, A., Itoh, T., Shimada, M. & Finlayson, C.M. (2018). The Global Mangrove Watch - a New 2010 Global Baseline of Mangrove Extent. Remote Sensing, 2018. 
+
+tutorials: N/A
+
+does_study_update: yes
+
+update_schedule: annually
+
+sampling_error: Overall accuracy was 95.25 % while User's and Producer's accuracies for the mangrove class were estimated at 97.5 % and 94.0 %, respectively.
+
+missing_data: N/A
+
+file_type: 
+  - shapefile
+
+file_size: 881 MB
+
+citation_policy: Please cite the data source in all publications. 
+
+data_type_tag:
+  - mangrove
+  - blue carbon
+  - coastal
+
+ecosystems:
+  - marine
+

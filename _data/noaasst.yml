@@ -1,0 +1,64 @@
+name: NOAA Optimum Interpolation Sea Surface Temperature V2
+
+variable: sea surface temperature
+
+description: Sea surface temperature available as weekly means from 1981-1989 and 1989-2019, monthly means from 1981-2019, long term monthly means from 1961-1990, and long term monthly means from 1971-2000. 
+
+url: https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html
+
+download_instructions: Download NetCDF file directly from website.
+
+associated_data_packages: R packages: ncdf4, chron
+
+timespan:
+  - start: 1961
+  - end: 2019
+
+spatial_coverage: global
+
+spatial_bounding_lat: 89.5 N - 89.5 S
+
+spatial_bounding_lon: 0.5 E - 359.5 E
+
+spatial_resolution: 1.0 degree latitude x 1.0 degree longitude global grid
+
+temporal_resolution: annual
+
+temporal_continuous: yes
+
+spatial_continuous: yes
+
+spatial_projection: N/A
+
+units: degrees C
+
+source:
+  - satellite
+  - in situ
+
+reference_papers: When using the data in a paper, the following is the correct citation to use: Reynolds, R.W., Rayner, N.A., Smith, T.M., Stokes, D.C. & Wang, W. (2002). An improved in situ and satellite SST analysis for climate. J. Climate, 15, 1609-1625. 
+
+tutorials: N/A
+
+does_study_update: yes
+
+update_schedule: weekly & monthly
+
+sampling_error: no
+
+missing_data: missing data is flagged with a value of 32767s.
+
+file_type: 
+  - netcdf
+
+file_size: ranging from 2 MB - 133 KB
+
+citation_policy: Acknowledge use of data with: NOAA_OI_SST_V2 data provided by the NOAA/OAR/ESRL PSD, Boulder, Colorado, USA, from their website at http://www.esrl.noaa.gov/psd/ They also ask to send a copy of the relevant publication to keep the data set freel available online in the future.
+
+data_type_tag:
+  - temperature
+  - marine
+
+ecosystems:
+  - marine
+
